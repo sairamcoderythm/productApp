@@ -1,0 +1,26 @@
+<h3>Edit Products</h3>
+
+<div>
+  <form (ngSubmit)="updateProduct()">
+    <label for="name">Name</label>
+    <input type="text" id="name" name="name"  [(ngModel)]="product.name">
+
+    <label for="price">Price</label>
+    <input type="text" id="price" name="price"  [(ngModel)]="product.price">
+
+    <label for="category">category</label>
+    <input type="text" id="category" name="category"  [(ngModel)]="product.category">
+    
+    <label for="desc">Description</label>
+    <br>
+    <textarea rows="4" cols="50"  [(ngModel)]="product.description">
+      </textarea>
+<br>
+    <div class="upload-btn-wrapper">
+      <button class="btn">Upload a Image</button>
+      <input type="file" name="myfile"  [(ngModel)]="product.image" />
+    </div>
+  
+    <input type="submit" value="Edit Products">
+  </form>
+</div>

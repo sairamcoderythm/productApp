@@ -1,0 +1,86 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<h2>Product List</h2>
+<div class="table-responsive" *ngFor="let product of products">
+<table  class="table">
+  <tr>
+    <th>Name</th>
+    <th>Description</th>
+    <th>Category</th>
+    <th>Price</th>
+    <th>Photos</th>
+  </tr>
+  <tr>
+    <td click="openViewModal(i)">{{product.name}}</td>
+    <td click="openViewModal(i)">{{product.description}}</td>
+    <td click="openViewModal(i)">{{product.category}}</td>
+    <td click="openViewModal(i)">{{product.price}}</td>
+    <td click="openViewModal(i)"> <img [src]="product.avatar" class="user-avatar img-rounded"></td>
+
+  </tr>
+  <!-- <tr>
+    <td>Lois</td>
+    <td>Griffin</td>
+    <td>$150</td>
+    <td>$250</td>
+  </tr>
+  <tr>
+    <td>Joe</td>
+    <td>Swanson</td>
+    <td>$300</td>
+    <td>$250</td>
+  </tr>
+  <tr>
+    <td>Cleveland</td>
+    <td>Brown</td>
+    <td>$250</td>
+    <td>$250</td>
+
+</tr> -->
+</table>
+</div>
+
+<!-- <div class="jumbotron text-center">
+    <h1>Products</h1>
+  
+    <a routerLink="/product-create" class="btn btn-sm btn-info">Add Product</a>
+  </div>
+  
+  <div class="user-list row" style="display:inline-block" *ngIf="products">
+  
+    <div class="col-sm-4" *ngFor="let product of products">
+  
+      <div class="user-card text-center">
+        <img [src]="product.avatar" class="user-avatar img-rounded">
+  
+        <h2>{{ product.name }} <small>{{ product.price }}</small></h2>
+      </div>
+  
+    </div>
+  
+  </div> -->
+
+  <div class="container">
+      <!-- Modal -->
+      <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+              <h4 class="modal-title">Modal Header</h4>
+            </div>
+            <div class="modal-body">
+              <p>Some text in the modal.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      
+    </div>

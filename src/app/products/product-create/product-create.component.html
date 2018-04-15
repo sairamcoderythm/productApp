@@ -1,0 +1,46 @@
+
+<!-- 
+  <form>
+
+    <div class="form-group">
+      <label>Name</label>
+      <input type="text" class="form-control" name="name" [(ngModel)]="user.name">
+    </div>
+
+    <div class="form-group">
+      <label>Username</label>
+      <input type="text" class="form-control" name="username" [(ngModel)]="user.username">
+    </div>
+
+
+    <button type="submit" class="btn btn-success">Create Products</button>
+
+  </form> -->
+
+  <h3>Add Products</h3>
+
+<div>
+  <form  #productForm="ngForm" (ngSubmit)="createProduct()">
+    <label for="name">Name</label>
+    <input type="text" [(ngModel)]="product.name" id="name"  >
+
+    <label for="price">Price</label>
+    <input type="text"  [(ngModel)]="product.price" id="price" >
+
+    <label for="category">Category</label>
+    <input type="text"  [(ngModel)]="product.category" id="category" >
+    
+    <label for="desc">Description</label>
+    <br>
+    <textarea rows="4" cols="50"  [(ngModel)]="product.description">
+      </textarea>
+<br>
+    <div class="upload-btn-wrapper">
+      <button class="btn">Upload a Image</button>
+      <input type="file" [(ngModel)]="product.avatar"  />
+    </div>
+  
+    <input type="submit" value="Add Products">
+  </form>
+</div>
+
